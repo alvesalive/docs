@@ -4,7 +4,7 @@ Esta documentação foi feita utilizando o `Mintlify` .
 
 O objetivo é servir como material para consulta rápida com relação a demandas mais comuns, contendo aqui:
 
-* Págins Informativas
+* Páginas Informativas
 
 * Design System
 
