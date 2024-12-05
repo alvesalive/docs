@@ -15,16 +15,12 @@
       "to": "#07C983"
     }
   },
-  "topbarLinks": [
+  "topbarCtaButton": [
     {
-      "name": "Suporte",
+      "name": "Responsável",
       "url": "mailto:willyan.net@gmail.com"
     }
   ],
-  "topbarCtaButton": {
-    "name": "Painel",
-    "url": "https://dashboard.mintlify.com"
-  },
   "tabs": [
     {
       "name": "Referência da API",
