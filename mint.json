@@ -35,23 +35,6 @@
       "url": "api-reference"
     }
   ],
-  "anchors": [
-    {
-      "name": "Documentação",
-      "icon": "book-open-cover",
-      "url": "https://alvesalive.mintlify.app/"
-    },
-    {
-      "name": "Comunidade",
-      "icon": "slack",
-      "url": "https://mintlify.com/community"
-    },
-    {
-      "name": "Blog",
-      "icon": "newspaper",
-      "url": "https://mintlify.com/blog"
-    }
-  ],
   "navigation": [
     {
       "group": "SQL Server",
