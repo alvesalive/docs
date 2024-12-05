@@ -53,8 +53,7 @@
       "group": "SQL Server",
       "pages": [
         "introduction",
-        "quickstart",
-        "development"
+        "diaria"
       ]
     },
     {
