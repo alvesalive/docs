@@ -84,11 +84,35 @@ ORDER BY
 ## Verificação de Backups
 
 <AccordionGroup>
-  <Accordion title="Backups realizados">
-    Script
+  <Accordion title="Backups">
+    Veja os backups que foram realizados
   </Accordion>
 
-  <Accordion title="Integridados dos backups">
-    Script
+  <Accordion title="Integridade">
+    Verificar o arquivo. Não esqueça de avaliar a compatibilidade da versão.
   </Accordion>
 </AccordionGroup>
+
+
+
+<CodeGroup>
+  ```sql Backups Realizados
+  SELECT 
+      database_name, 
+      backup_start_date, 
+      backup_finish_date, 
+      backup_size/1024/1024 AS BackupSizeMB, 
+      type AS BackupType,
+      physical_device_name AS BackupLocation
+  FROM 
+      msdb.dbo.backupset bs
+  JOIN 
+      msdb.dbo.backupmediafamily bmf ON bs.media_set_id = bmf.media_set_id
+  ORDER BY 
+  backup_finish_date DESC;
+  ```
+
+  ```sql Integridade
+  RESTORE VERIFYONLY FROM DISK = 'F:\Backup\sig.bak';
+  ```
+</CodeGroup>
