@@ -7,8 +7,6 @@ description: "Atividades comuns."
   **Importante**: Sempre verifique a versão do DBMS, pois alguns scritps não funcionam em todas as versões.
 </Info>
 
-
-
 ### **Verificação de Status dos Servidores**
 
 &#x20;**Objetivo**: Garantir que todos os serviços do SQL Server estão em execução corretamente:
@@ -23,8 +21,6 @@ SELECT
     SERVERPROPERTY('IsClustered') AS IsClustered,
     SERVERPROPERTY('Collation') AS Collation;
 ```
-
-
 
 ### **Verificação de Status dos Servidores**
 
@@ -53,13 +49,11 @@ Script para monitorar o uso de CPU e memória
   ```
 </CodeGroup>
 
-<Tip>
+<Warning>
   Atenção! Script não validado, necessita de revisão.
-</Tip>
+</Warning>
 
 ## Consultas que estão utilizando mais recursos
-
-
 
 ```sql resources.sql
 SELECT 
@@ -79,8 +73,6 @@ ORDER BY
     qs.total_worker_time DESC;
 ```
 
-
-
 ## Verificação de Backups
 
 <AccordionGroup>
@@ -92,8 +84,6 @@ ORDER BY
     Verificar o arquivo. Não esqueça de avaliar a compatibilidade da versão.
   </Accordion>
 </AccordionGroup>
-
-
 
 <CodeGroup>
   ```sql Backups Realizados
