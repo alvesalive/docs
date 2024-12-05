@@ -61,7 +61,7 @@
       ]
     },
     {
-      "group": "Essenciais",
+      "group": "Docker",
       "pages": [
         "essentials/markdown",
         "essentials/code",
@@ -87,8 +87,8 @@
     }
   ],
   "footerSocials": {
-    "x": "https://x.com/mintlify",
+    "x": "#",
     "github": "https://github.com/alvesalive",
-    "linkedin": "https://linkedin.com/company/mintlify"
+    "linkedin": "#"
   }
 }
