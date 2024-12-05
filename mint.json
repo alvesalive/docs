@@ -1,10 +1,10 @@
 {
   "$schema": "https://mintlify.com/schema.json",
-  "name": "Starter Kit",
-  "logo": {
-    "dark": "/logo/dark.svg",
-    "light": "/logo/light.svg"
-  },
+  "name": "Guia de Referência",
+  <!-- "logo": {
+    "dark": "/logo/dark2.svg",
+    "light": "/logo/light2.svg"
+  }, -->
   "favicon": "/favicon.svg",
   "colors": {
     "primary": "#0D9373",
@@ -17,28 +17,28 @@
   },
   "topbarLinks": [
     {
-      "name": "Support",
-      "url": "mailto:hi@mintlify.com"
+      "name": "Suporte",
+      "url": "mailto:willyan.net@gmail.com"
     }
   ],
   "topbarCtaButton": {
-    "name": "Dashboard",
+    "name": "Painel",
     "url": "https://dashboard.mintlify.com"
   },
   "tabs": [
     {
-      "name": "API Reference",
+      "name": "Referência da API",
       "url": "api-reference"
     }
   ],
   "anchors": [
     {
-      "name": "Documentation",
+      "name": "Documentação",
       "icon": "book-open-cover",
-      "url": "https://mintlify.com/docs"
+      "url": "https://alvesalive.mintlify.app/"
     },
     {
-      "name": "Community",
+      "name": "Comunidade",
       "icon": "slack",
       "url": "https://mintlify.com/community"
     },
@@ -50,7 +50,7 @@
   ],
   "navigation": [
     {
-      "group": "Get Started",
+      "group": "SQL Server",
       "pages": [
         "introduction",
         "quickstart",
@@ -69,13 +69,13 @@
       ]
     },
     {
-      "group": "API Documentation",
+      "group": "Documentação da API",
       "pages": [
         "api-reference/introduction"
       ]
     },
     {
-      "group": "Endpoint Examples",
+      "group": "Exemplos de Endpoint",
       "pages": [
         "api-reference/endpoint/get",
         "api-reference/endpoint/create",
@@ -85,7 +85,7 @@
   ],
   "footerSocials": {
     "x": "https://x.com/mintlify",
-    "github": "https://github.com/mintlify",
+    "github": "https://github.com/alvesalive",
     "linkedin": "https://linkedin.com/company/mintlify"
   }
 }
