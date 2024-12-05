@@ -15,17 +15,15 @@
       "to": "#07C983"
     }
   },
-  "topbarLinks": [
-  "topbarCtaButton": [
+"topbarLinks": [
     {
       "name": "Suporte",
-      "name": "Responsável",
       "url": "mailto:willyan.net@gmail.com"
     }
   ],
   "topbarCtaButton": {
-    "name": "Responsável",
-    "url": ""mailto:willyan.net@gmail.com"
+    "name": "Painel",
+    "url": "https://dashboard.mintlify.com"
   },
   "tabs": [
     {
