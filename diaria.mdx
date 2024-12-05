@@ -1,10 +1,10 @@
 ---
-title: "Development"
-description: "Preview changes locally to update your docs"
+title: "Rotina Diária"
+description: "Atividades comuns."
 ---
 
 <Info>
-  **Prerequisite**: Please install Node.js (version 19 or higher) before proceeding.
+  **Importante**: Sempre verifique a versão do DBMS, pois alguns scritps não funcionam em todas as versões.
 </Info>
 
 Follow these steps to install and run Mintlify on your operating system:
@@ -29,54 +29,57 @@ mintlify dev
 
 A local preview of your documentation will be available at `http://localhost:3000`.
 
-### Custom Ports
+### **Verificação de Status dos Servidores**
 
-By default, Mintlify uses port 3000. You can customize the port Mintlify runs on by using the `--port` flag. To run Mintlify on port 3333, for instance, use this command:
+&#x20;**Objetivo**: Garantir que todos os serviços do SQL Server estão em execução corretamente:
 
-```bash
-mintlify dev --port 3333
+```sql
+SELECT 
+    SERVERPROPERTY('MachineName') AS ServerName,
+    SERVERPROPERTY('ProductVersion') AS SQLVersion,
+    SERVERPROPERTY('ProductLevel') AS ServicePackLevel,
+    SERVERPROPERTY('Edition') AS SQLEdition,
+    SERVERPROPERTY('EngineEdition') AS EngineEdition,
+    SERVERPROPERTY('IsClustered') AS IsClustered,
+    SERVERPROPERTY('Collation') AS Collation;
 ```
 
-If you attempt to run Mintlify on a port that's already in use, it will use the next available port:
 
-```md
-Port 3000 is already in use. Trying 3001 instead.
-```
 
-## Mintlify Versions
+### **Verificação de Status dos Servidores**
 
-Please note that each CLI release is associated with a specific version of Mintlify. If your local website doesn't align with the production version, please update the CLI:
+Confirmar se o SQL Server e o SQL Server Agent estão em execução no SQL Server Configuration Manager:
+
+## **Monitoramento de Desempenho**
+
+Objetivo: Verificar o uso de recursos do servidor.&#x20;
+
+Script para monitorar o uso de CPU e memória
 
 <CodeGroup>
-  ```bash npm
-  npm i -g mintlify@latest
-  ```
-
-  ```bash yarn
-  yarn global upgrade mintlify
+  ```sql cpu/memória
+  SELECT 
+      record_id, 
+      [SQLProcessUtilization] AS SQLServerCPUUsage, 
+      [SystemIdle] AS SystemIdleProcess,
+      100 - SystemIdle - SQLProcessUtilization AS OtherCPUUsage,
+      [TIMESTAMP]
+  FROM 
+      sys.dm_os_ring_buffers
+  WHERE 
+      ring_buffer_type = N'RING_BUFFER_SCHEDULER_MONITOR'
+  ORDER BY 
+      TIMESTAMP DESC;
   ```
 </CodeGroup>
 
-## Validating Links
-
-The CLI can assist with validating reference links made in your documentation. To identify any broken links, use the following command:
-
-```bash
-mintlify broken-links
-```
-
-## Deployment
-
 <Tip>
-  Unlimited editors available under the [Pro
-  Plan](https://mintlify.com/pricing) and above.
+  Atenção! Script não validado, necessita de revisão.
 </Tip>
 
 If the deployment is successful, you should see the following:
 
-<Frame>
-  <img src="/images/checks-passed.png" style={{ borderRadius: '0.5rem' }} />
-</Frame>
+<Frame />
 
 ## Code Formatting
 
