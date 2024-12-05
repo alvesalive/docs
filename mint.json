@@ -15,12 +15,18 @@
       "to": "#07C983"
     }
   },
+  "topbarLinks": [
   "topbarCtaButton": [
     {
+      "name": "Suporte",
       "name": "Responsável",
       "url": "mailto:willyan.net@gmail.com"
     }
   ],
+  "topbarCtaButton": {
+    "name": "Responsável",
+    "url": ""mailto:willyan.net@gmail.com"
+  },
   "tabs": [
     {
       "name": "Referência da API",
